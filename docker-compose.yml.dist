@@ -1,0 +1,46 @@
+version: '3'
+networks:
+  common:
+    external:
+      name: common_network
+services:
+  front:
+    container_name: alpez_front
+    build:
+      context: front/
+      args:
+        quasar_version: 1.15.21
+        quasar_cli_version: 1.2.1
+    #restart: always
+    environment:
+      - TZ=America/Mexico_City
+    ports:
+      - 8176:8176
+      #- 8076:80
+      #- 8576:443
+    volumes:
+      - ./front/web:/usr/share/nginx/html
+      - ./front/conf.d:/etc/nginx/conf.d
+      #- ./front/ssl:/etc/nginx/ssl
+    networks: 
+        - common
+    depends_on:
+      - back
+  back:
+     container_name: alpez_back
+     build: 
+       context: back/
+       args:
+         server_name: back_alpez
+         #phalcon_version: 4.1.0
+     #restart: always
+     environment:
+       - TZ=America/Mexico_City
+     ports:
+       - 8276:80
+       #- 8676:443
+     volumes:
+       - ./back/api:/var/www/localhost/htdocs/
+       #- ./front/ssl:/etc/apache2/ssl/
+     networks: 
+       - common

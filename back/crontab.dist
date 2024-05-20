@@ -1,0 +1,9 @@
+# do daily/weekly/monthly maintenance
+# min	hour	day	month	weekday	command
+*/2 * * * * php /var/www/localhost/htdocs/app/cli.php Main uploadFile
+*/2 * * * * php /var/www/localhost/htdocs/app/cli.php Prices uploadPrices
+*/2 * * * * php /var/www/localhost/htdocs/app/cli.php Main revisarTimbrado
+# */2 * * * * php /var/www/localhost/htdocs/app/cli.php Main revisarPagos
+# */30 * * * * touch /tmp/prueba-$(date +%d-%m-%Y).test
+0 14 * * * /usr/bin/php /var/www/localhost/htdocs/app/cli.php Mail send
+# (No Borrar linea final)

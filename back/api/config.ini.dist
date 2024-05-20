@@ -1,0 +1,11 @@
+env = local
+
+[database]
+adapter  = Postgresql
+host     = host.docker.internal
+username = postgres
+password = root
+dbname   = alpez
+
+[jwt]
+key = jwtsecretkey

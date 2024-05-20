@@ -1,0 +1,9 @@
+.idea
+.git
+back/api/public/assets
+back/api/config.ini
+back/Dockerfile
+back/crontab
+front/conf.d/default.conf
+front/conf.d/default_ssl.conf
+docker-compose.yml

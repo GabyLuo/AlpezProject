@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <style>
+        #logo-container {
+            text-align: center;
+        }
+        #logo {
+            max-width: 300px;
+        }
+        p {
+            text-align: justify;
+            color: #FFFFFF;
+            font-family: verdana;
+            font-size: 15px;
+        }
+        </style>
+    </head>
+    <body style="background-color: rgb(14, 15, 31);">
+        <div id="logo-container">
+            <img id="logo" src="http://api.alpez.beta.wasp.mx/public/images/logoAlpez.png" alt="Alpez"/>
+        </div>
+            <p style="text-align: center">
+                Alertas sistema ERP Alpez.
+                <br>
+                <br>
+                Adjuntos en este correo se encuentran los reportes de alertas de las estaciones.
+                <br>
+                <br>
+                Alpez, Energia y Distribución 
+                <br>
+                <br>
+                <br>
+            </p>
+    </body>
+</html>

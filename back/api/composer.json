@@ -1,0 +1,10 @@
+{
+    "require": {
+        "firebase/php-jwt": "^5.0",
+        "swiftmailer/swiftmailer": "^5.4",
+        "setasign/fpdf": "1.8.1",
+        "endroid/qr-code": "^3.7",
+        "khanamiryan/qrcode-detector-decoder": "^1.0",
+        "luecano/numero-a-letras": "^3.0"
+    }
+}

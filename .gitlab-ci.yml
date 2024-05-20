@@ -1,0 +1,17 @@
+deploy_beta:
+  stage: deploy
+  environment: Beta
+  only:
+    - development
+  script:
+    - export SSHPASS=$USER_DOCKER
+    - sshpass -e rsync --exclude=.git -r ./ developer@mule.wasp.mx:/home/developer/services/alpez/ 
+
+deploy_master:
+  stage: deploy
+  environment: Master
+  only:
+    - master
+  script:
+    - export SSHPASS=$USER_DOCKER_P
+    - sshpass -e rsync --exclude=.git -r ./ developer@trevize.wasp.mx:/home/developer/services/alpez/

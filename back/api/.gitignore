@@ -1,0 +1,8 @@
+composer.lock
+config.ini
+/vendor/
+/public/assets/images/products/
+/.phalcon/
+
+# PHPStorm
+/.idea/
